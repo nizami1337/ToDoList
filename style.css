@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #282828;
+    font-size: 1.6rem;
+}
+
+.addTask, .tasks {
+    width: 70%;
+    margin-top: 2rem;
+    padding: 3rem 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    color: #000;
+    background-color: #fff;
+}
+
+.addTask h1 {
+    margin-bottom: 1.6rem;
+}
+
+#addTaskForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+#addTaskForm div{
+    display: flex;
+}
+
+#addTaskForm div p {
+    min-width: 13rem;
+}
+
+#addTaskForm div input, #addTaskForm div textarea {
+    width: 300px;
+}
+
+#addTaskForm input[type="submit"] {
+    width: 200px;
+    height: 40px;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    background-color: rgb(20, 213, 20);
+}
+
+.tasks {
+    padding: 3rem 5rem;
+}
+
+.tasks h1 {
+    margin-bottom: 1.6rem;
+}
+
+#taskList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.task {
+    width: 80%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.task div h4 {
+    margin-bottom: .6rem;
+}
+
+.task div p {
+    font-size: 1.4rem;
+}
+
+.task button {
+    padding: 1rem 1.3rem;
+    font-size: 2rem;
+    color: rgb(203, 6, 6);
+    border: none;
+    border-radius: 50%;
+    background: none;
+}
+
+.task button:hover {
+    color: #fff;
+    background-color: rgb(203, 6, 6);
+    cursor: pointer;
+}
