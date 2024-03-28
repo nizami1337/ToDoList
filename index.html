@@ -9,17 +9,15 @@
 <body>
     <div class="addTask">
         <h1>To-Do List</h1>
-        <form id="addTaskForm">
-            <div><p>Task Name: </p><input type="text" name="taskName"></div>
-            <div><p>Task Description: </p><textarea name="taskDescription"></textarea></div>
-            <input type="submit" value="Add">
+        <form id="addTaskForm" onsubmit="return false">
+            <div><p>Task Name: </p><input id="taskNameInput" type="text" name="taskName"></div>
+            <div><p>Task Description: </p><textarea id="taskDescInput" name="taskDescription"></textarea></div>
+            <div class="buttons"><button>Add</button></div>
         </form>
     </div>
     <div class="tasks">
         <h1>Task List</h1>
-        <ul id="taskList">
-            
-        </ul>
+        <ul id="taskList"></ul>
     </div>
     <script src="index.js"></script>
 </body>

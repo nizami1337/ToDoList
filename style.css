@@ -49,7 +49,7 @@ body {
     width: 300px;
 }
 
-#addTaskForm input[type="submit"] {
+#addTaskForm button {
     width: 200px;
     height: 40px;
     font-size: 1.6rem;
@@ -57,6 +57,10 @@ body {
     border-radius: 25px;
     color: white;
     background-color: rgb(20, 213, 20);
+}
+
+#addTaskForm button:hover {
+    cursor: pointer;
 }
 
 .tasks {
@@ -86,6 +90,11 @@ body {
     border-radius: 10px;
 }
 
+.task div {
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
 .task div h4 {
     margin-bottom: .6rem;
 }
@@ -103,8 +112,17 @@ body {
     background: none;
 }
 
+.task button:nth-child(1) {
+    color: rgb(104, 209, 17);
+}
+
 .task button:hover {
     color: #fff;
     background-color: rgb(203, 6, 6);
     cursor: pointer;
+}
+
+.task button:nth-child(1):hover {
+    background-color: rgb(104, 209, 17);
+    color: #fff;
 }
