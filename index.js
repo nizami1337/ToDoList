@@ -4,7 +4,8 @@ let buttons = document.getElementsByClassName("buttons")[0];
 let editMode = false;
 let currentlyEditing;
 
-let tasks = []
+let tasks = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : []
+refresh()
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -18,6 +19,7 @@ form.addEventListener('submit', (e) => {
             task[key] = val
         }
         tasks.push(task)
+        localStorage.setItem('tasks', JSON.stringify(tasks))
         let el = document.createElement('li')
         el.className = 'task'
         el.innerHTML = `<div><h4>${task['taskName']}</h4><p>${task['taskDescription']}</p></div><span><button onclick="editTask(${id})"><i class="fa-solid fa-pen-to-square"></i></button><button onclick="removeTask(${id})"><i class="fa-solid fa-trash"></i></button></span>`
@@ -27,6 +29,7 @@ form.addEventListener('submit', (e) => {
             if (key == "taskName" && val == "") val = "Untitled Task"
             tasks[currentlyEditing][key] = val
         }
+        localStorage.setItem('tasks', JSON.stringify(tasks))
         cancel()
         refresh()
     }
@@ -34,6 +37,7 @@ form.addEventListener('submit', (e) => {
 
 function removeTask(id) {
     tasks = tasks.filter(task => task.id != id)
+    localStorage.setItem('tasks', JSON.stringify(tasks))
     refresh()
 }
 
